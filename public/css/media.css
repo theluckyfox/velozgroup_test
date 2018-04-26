@@ -1,0 +1,65 @@
+@media only screen and (min-width: 576px) {
+    #main {
+        width: 90%;
+    }
+    .section-bills > .bill-row {
+        flex-wrap: nowrap;
+    }
+    .section-bills > .bill-row-head {
+        display: flex;
+    }
+    .section-bills > .bill-row > .bill-vendor, 
+    .section-bills > .bill-row > .bill-category {
+        flex-basis: 25%;
+    }
+
+    .section-bills > .bill-row > .bill-created-date {
+        flex-basis: 20%;
+    }
+
+    .section-bills > .bill-row > .bill-paid-status,
+    .section-bills > .bill-row > .bill-price {
+        flex-basis: 15%;
+    }
+
+    .section-bills > .bill-row > .bill-cell {
+        border: 1px solid #bfbfbf;
+        border-left: none;
+        border-bottom: none; 
+    }
+
+    .section-bills > .bill-row > .bill-cell:first-child {
+        border-left: 1px solid #bfbfbf;
+    }
+    
+    .section-bills > .bill-row:last-child > .bill-cell {
+        border-bottom: 1px solid #bfbfbf;
+    }
+
+    .section-bills > .bill-row > .bill-buttons {
+        position: absolute;
+        left: calc(100% + 10px);
+        opacity: 0;
+        visibility: hidden;
+        justify-content: unset;
+    }
+
+    .modal > .form,
+    #edit-modal > .form {
+        padding: 50px 100px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+   
+}
+
+@media only screen and (min-width: 992px) {
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    #main {
+        width: 60%;
+    }
+}

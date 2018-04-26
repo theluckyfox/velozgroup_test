@@ -1,0 +1,177 @@
+body {
+    font-family: 'Raleway';
+}
+
+button {
+    transition: transform 0.3s ease-in-out;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+/* modals */
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, all 0.3s ease-in-out;
+}
+
+.modal > .form {
+    padding: 50px 15px;
+    background-color: #fff;
+}
+
+#edit-modal > .form {
+    padding: 50px;
+}
+
+#delete-modal > .form,
+.modal > .form .button-section {    
+    text-align: right;
+}
+
+.modal > .form .button-section {
+    margin-top: 20px;
+}
+
+#delete-modal > .form > p {
+    font-size: 24px;
+    text-align: center;
+}
+
+.modal > .form button {
+    padding: 10px 25px;
+    border-radius: 5px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.modal > .form .button-cancel {
+    background-color: #9dc8dc;
+}
+
+.modal > .form > section:not(.button-section) > * {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.modal > .form > section:not(.button-section) > *:not(label){
+    padding: 10px;
+}
+
+.modal > .form label {
+    margin: 10px 0;
+}
+
+.modal > .form input[type="checkbox"]{
+    width: auto;
+}
+
+/* ============================== */
+
+/* main */
+
+#main {
+    width: 95%;
+    margin: 20px auto;
+}
+
+#main > .buttons {
+    text-align: right;
+}
+
+#main > .buttons > button {
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+/* ============================== */
+
+/* section-bills */
+
+.section-bills > .bill-row {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}  
+
+.section-bills > .bill-row-head {
+    display: none;
+}
+
+.section-bills > .bill-row-head > .bill-cell {
+    font-weight: bold;
+    background-color: #f3f3f3;
+}
+
+.section-bills > .bill-row > .bill-cell {
+    padding: 20px 0;
+    text-align: center;
+    border: 1px solid #bfbfbf;     
+    border-top: none; 
+}
+
+.section-bills > .bill-row > .bill-cell:first-child {
+    border-top: 1px solid #bfbfbf;  
+}
+
+.section-bills > .bill-row > * {
+    flex-basis: 100%;
+}
+
+.section-bills > .bill-row > .bill-buttons {
+    position: unset;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: flex-end;    
+    transition: visibility 0s, all 0.3s ease-in-out;
+}
+
+.section-bills > .bill-row > .bill-buttons > button {
+    margin: 0 5px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.section-bills > .bill-row > .bill-buttons > .edit-bill {
+    background-image: url('../images/edit.png');
+}
+
+.section-bills > .bill-row > .bill-buttons > .delete-bill {
+    background-image: url('../images/delete.png');
+}
+
+.section-bills > .bill-row:hover > .bill-buttons {
+    opacity: 1;
+    visibility: visible;
+    left: 100%;    
+}
+
+/* ============================== */
